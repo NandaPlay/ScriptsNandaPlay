@@ -1,0 +1,81 @@
+------------------------------------------------------------------------------
+ -- Número Aleatório sem repetição e Jogo Final Público 1.0
+ -- By NandaPlay UID 289057 from Youtube channel https://www.youtube.com/NandaaPlay
+
+ -- Número aleatório sem repetição e acrescentar um número para o jogo final.
+
+ -- Requer:
+	-- 2 variáveis nos gatilhos
+	-- 2 ações de script nos gatilhos
+	-- 2 scripts: Gerar Número Aleatório e Resetar Jogos.
+  
+  
+---------------------------------
+-- CONFIGURAÇÃO GATILHOS NÚMERO ALEATÓRIO SEM REPETIR
+---------------------------------
+-- [CRIE UMA AÇÃO NOS GATILHOS DE SCRIPT E COLOQUE APENAS ESSA LINHA ABAIXO:]
+-- JogoAleatorio()
+
+-- Essa é uma variável criada no script
+
+-- [CRIE UMA VARIÁVEL NOS GATILHOS COM O NOME: ]
+-- NumeroAleatorio
+
+
+---------------------------------
+-- CONFIGURAÇÃO GATILHOS RESETAR JOGO
+---------------------------------
+-- [CRIE UMA AÇÃO NOS GATILHOS DE SCRIPT E COLOQUE APENAS ESSA LINHA ABAIXO:]
+-- ResetaJogo()
+
+-- Essa é uma variável criada no script
+
+-- [CRIE UMA VARIÁVEL NOS GATILHOS COM O NOME: ]
+-- JogoFinal
+
+
+------------------------------------------------------------------------------
+-- /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
+-- CRIE UM SCRIPT DE NÚMERO ALEATÓRIO
+-- MODIFIQUE APENAS O QUE É PERMITIDO
+--  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
+------------------------------------------------------------------------------
+
+Numero = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} -- coloque a quantidade de jogos que tem nos seus mini-jogos
+Numero2 = {}
+Numero3 = {}
+
+JogoAleatorio = function()
+    if #Numero >= 1 then --#Numero é o tamanho da tabela
+        local NewValue = math.random(1,#Numero)
+        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"NumeroAleatorio", Numero[NewValue])
+        table.insert(Numero2, Numero[NewValue])
+        table.remove(Numero, NewValue)
+        print(Numero)
+        print(Numero2)
+    else
+        table.insert(Numero3, 16) -- coloque o número do seu jogo final
+        Numero = Numero2
+        Numero2 = {}
+        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"NumeroAleatorio",0)
+        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"JogoFinal",16) -- coloque o número do seu jogo final
+        print(Numero3)
+    end
+end
+
+
+------------------------------------------------------------------------------
+-- /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
+-- CRIE UM SCRIPT DE RESETAR OS NÚMEROS / JOGOS
+-- MODIFIQUE APENAS O QUE É PERMITIDO
+--  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
+------------------------------------------------------------------------------
+ResetaJogo = function() 
+        Numero = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} -- coloque a quantidade de jogos que tem nos seus mini-jogos
+        Numero2 = {}
+        Numero3 = {}
+        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"NumeroAleatorio",0)
+        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"JogoFinal",0)
+        print(Numero)
+        print(Numero2)
+end
