@@ -7,7 +7,7 @@
  -- Requer:
 	-- 2 variáveis nos gatilhos
 	-- 2 ações de script nos gatilhos
-	-- 2 scripts: Gerar Número Aleatório e Resetar Jogos.
+	-- 2 scripts: Gerar Número Aleatório e Resetar Jogos (acesse: https://github.com/NandaPlay/ScriptsNandaPlay/blob/11683df43f532a97689a66a2f6bd3b3171fe4845/Mini-Jogos-Eliminat%C3%B3rios/Reset%20N%C3%BAmeros%20Aleat%C3%B3rios)
   
   
 ---------------------------------
@@ -18,19 +18,8 @@
 
 -- Essa é uma variável criada no script
 
--- [CRIE UMA VARIÁVEL NOS GATILHOS COM O NOME: ]
+-- [CRIE 2 VARIÁVEIS NOS GATILHOS COM O NOME: ]
 -- NumeroAleatorio
-
-
----------------------------------
--- CONFIGURAÇÃO GATILHOS RESETAR JOGO
----------------------------------
--- [CRIE UMA AÇÃO NOS GATILHOS DE SCRIPT E COLOQUE APENAS ESSA LINHA ABAIXO:]
--- ResetaJogo()
-
--- Essa é uma variável criada no script
-
--- [CRIE UMA VARIÁVEL NOS GATILHOS COM O NOME: ]
 -- JogoFinal
 
 
