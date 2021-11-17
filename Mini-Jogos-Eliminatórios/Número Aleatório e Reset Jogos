@@ -62,20 +62,3 @@ JogoAleatorio = function()
         print(Numero3)
     end
 end
-
-
-------------------------------------------------------------------------------
--- /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
--- CRIE UM SCRIPT DE RESETAR OS NÚMEROS / JOGOS
--- MODIFIQUE APENAS O QUE É PERMITIDO
---  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\  /!\ 
-------------------------------------------------------------------------------
-ResetaJogo = function() 
-        Numero = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15} -- coloque a quantidade de jogos que tem nos seus mini-jogos
-        Numero2 = {}
-        Numero3 = {}
-        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"NumeroAleatorio",0)
-        VarLib2:setGlobalVarByName(VARTYPE.NUMBER,"JogoFinal",0)
-        print(Numero)
-        print(Numero2)
-end
